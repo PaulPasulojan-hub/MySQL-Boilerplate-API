@@ -1,0 +1,20 @@
+{
+    "database": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "your_mysql_password",
+        "database": "node_mysql_api"
+    },
+    "emailFrom": "your_email@gmail.com",
+    "smtpOptions": {
+        "host": "smtp.gmail.com",
+        "port": 465,
+        "secure": true,
+        "auth": {
+            "user": "your_email@gmail.com",
+            "pass": "your_email_password"
+        }
+    },
+    "secret": "your_jwt_secret_key"
+}
