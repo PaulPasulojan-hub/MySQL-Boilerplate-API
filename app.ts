@@ -1,34 +1,17 @@
-import express, { Application, Request, Response, NextFunction } from 'express';
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
-import swaggerUi from 'swagger-ui-express';
-import errorHandler from './_middleware/error-handler';
-import accountsController from './accounts/account.controller';
+import express from 'express';
 
-const app: Application = express();
+const config = require('./config.json');
 
-// Middleware
+const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: '*', credentials: true }));
-app.use(cookieParser());
 
-// Routes
-app.use('/accounts', accountsController);
+app.get('/', (req, res) => {
+  res.json({ message: 'API is running!' });
+});
 
-// Swagger docs
-try {
-    const swaggerDoc = require('./swagger.json');
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
-} catch {}
-
-// Error handler
-app.use(errorHandler);
-
-// Start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || config.server.port;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 
 export default app;
