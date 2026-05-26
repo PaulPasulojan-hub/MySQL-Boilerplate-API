@@ -1,6 +1,8 @@
 {
+  "name": "mysql-boilerplate-api",
+  "version": "1.0.0",
   "scripts": {
-    "start": "tsx app.ts",
+    "start": "npx tsx app.ts",
     "dev": "nodemon --exec tsx app.ts",
     "build": "tsc",
     "prod": "node dist/app.js"
@@ -19,6 +21,7 @@
     "nodemailer": "^8.0.7",
     "sequelize": "^6.37.8",
     "swagger-ui-express": "^5.0.1",
+    "tsx": "^4.19.4",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
@@ -32,7 +35,6 @@
     "@types/yamljs": "^0.2.34",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
-    "tsx": "^4.19.4",
     "typescript": "^6.0.3"
   }
 }
