@@ -1,20 +1,22 @@
 {
-  "database": {
-    "host": "mysql.railway.internal",
-    "port": 3306,
+  "db": {
+    "host": "interchange.proxy.rlwy.net",
+    "port": 54784,
     "user": "root",
-    "password": "IuZiOSipZYpgwOuTFYFPTVmibjNGJLYV",
+    "password": "gkYqHZcJxbIasbBvKFFavCpWsTHsppaT",
     "database": "railway"
   },
-  "emailFrom": "your_email@gmail.com",
+  "server": {
+    "port": 3000
+  },
+  "secret": "your-super-secret-jwt-key",
+  "emailFrom": "noreply@yourdomain.com",
   "smtpOptions": {
     "host": "smtp.gmail.com",
-    "port": 465,
-    "secure": true,
+    "port": 587,
     "auth": {
-      "user": "your_email@gmail.com",
-      "pass": "your_gmail_app_password"
+      "user": "your-email@gmail.com",
+      "pass": "your-email-password"
     }
-  },
-  "secret": "your_jwt_secret_key"
+  }
 }
