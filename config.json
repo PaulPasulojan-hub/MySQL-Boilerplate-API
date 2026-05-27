@@ -1,0 +1,22 @@
+﻿{
+    "database": {
+        "host": "153.92.15.31",
+        "port": 3306,
+        "user": "u875409848_pasulojan",
+        "password": " 2qW^sUg=M",
+        "database": "u875409848_pasulojan"
+    },
+    "secret": "ANY_LONG_RANDOM_STRING",
+    "emailFrom": "adrille.com",
+    "smtpOptions": {
+        "host": "sandbox.smtp.mailtrap.io",
+        "port": 2525,
+        "auth": {
+            "user": "19dfa0e35545bd",
+            "pass": "1c68baee26ebb9"
+        }
+    },
+    "server": {
+        "port": 4000
+    }
+}
