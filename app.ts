@@ -1,4 +1,5 @@
 import express from 'express';
+import db from './_helpers/db';
 
 const config = require('./config.json');
 
@@ -10,8 +11,18 @@ app.get('/', (req, res) => {
 });
 
 const PORT = process.env.PORT || config.server.port;
+
+db.getConnection((err: any, connection: any) => {
+  if (err) {
+    console.error('DB connection failed:', err.message);
+  } else {
+    console.log('Connected to MySQL!');
+    connection.release();
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-export default app;
+export default app;   

@@ -1,12 +1,11 @@
 const mysql = require('mysql2');
-const config = require('../config.json');
 
 const db = mysql.createPool({
-  host: config.db.host,
-  port: config.db.port,
-  user: config.db.user,
-  password: config.db.password,
-  database: config.db.database,
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT) || 3306,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
