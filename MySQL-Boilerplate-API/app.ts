@@ -1,5 +1,5 @@
-﻿import express from 'express';
-import db from './_helpers/db';
+import express from 'express';
+import db from './_helpers/db.js';
 
 const config = require('./config.json');
 

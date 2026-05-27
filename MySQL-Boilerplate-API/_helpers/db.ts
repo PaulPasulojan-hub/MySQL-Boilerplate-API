@@ -1,4 +1,4 @@
-﻿const mysql = require('mysql2');
+const mysql = require('mysql2');
 
 const db = mysql.createConnection({
   host: 'id-dci-web1631.main-hosting.eu',

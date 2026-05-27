@@ -8,5 +8,6 @@
   },
   "server": {
     "port": 3000
-  }
+  },
+  "secret": "your-super-secret-jwt-key"
 }
