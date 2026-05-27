@@ -4,8 +4,8 @@
   "description": "MySQL Boilerplate API",
   "main": "app.ts",
   "scripts": {
-    "start": "npx ts-node app.ts",
-    "dev": "npx nodemon --exec ts-node app.ts"
+    "start": "npx tsx app.ts",
+    "dev": "npx nodemon --exec tsx app.ts"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
